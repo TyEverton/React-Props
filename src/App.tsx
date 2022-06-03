@@ -1,4 +1,3 @@
-import Tweet from './components/tweet'
 import FeedScreen from './screens/news-feed-screen/news-feed-screen'
 
 function App() {
