@@ -5,7 +5,7 @@ import Tweet from '../../components/tweet'
 
 // Props are a way to pass data from one component (parent) to another component (child)
 
-// In this example - news-feed-screen is the parent component, while tweet is the child component
+// In this example - (news-feed-screen) is the parent component, while (tweet) is the child component
 function FeedScreen() {
   const [newTweet, setNewTweet] = useState<string | undefined>()
   const [listOfTweets, setListOfTweets] = useState<string[]>([
@@ -39,6 +39,7 @@ function FeedScreen() {
       </div>
       <div>
         {listOfTweets.map((tweetValue, tweetIndex) => {
+          // below, we are specifying that the child component (tweet) is going to receive props
           return <Tweet key={tweetIndex} tweetText={tweetValue} />
         })}
       </div>
